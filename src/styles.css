@@ -1,0 +1,130 @@
+/* CHECKPOINT 7 — Blue & white theme, mobile-first. */
+:root {
+  --blue-900: #0b2a5b;
+  --blue-700: #1250b0;
+  --blue-500: #2f7de1;
+  --blue-100: #e6f0fd;
+  --white: #ffffff;
+  --text: #14233f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--blue-100);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.header {
+  background: var(--blue-700);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.header h1 { margin: 0; font-size: 1.6rem; }
+.header p { margin: 0.25rem 0 0; opacity: 0.9; }
+
+.main { max-width: 960px; margin: 0 auto; padding: 1rem; }
+.section-title { color: var(--blue-900); font-size: 1.2rem; margin: 1.5rem 0 0.75rem; }
+
+/* Counter */
+.counter {
+  background: var(--white);
+  border: 2px solid var(--blue-500);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+.counter h2 { margin: 0; font-size: 1.1rem; color: var(--blue-900); }
+.counter__value { margin: 0.25rem 0 0.75rem; font-size: 3rem; font-weight: 700; color: var(--blue-700); }
+.counter__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid var(--blue-700);
+  cursor: pointer;
+}
+.btn--primary { background: var(--blue-700); color: var(--white); }
+.btn--primary:hover { background: var(--blue-900); }
+.btn--ghost { background: var(--white); color: var(--blue-700); }
+.btn--ghost:hover { background: var(--blue-100); }
+.btn:focus-visible { outline: 3px solid var(--blue-500); outline-offset: 2px; }
+
+/* Course grid: 1 column on narrow screens, more as space allows */
+.grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.card {
+  background: var(--white);
+  border-left: 5px solid var(--blue-500);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; color: var(--blue-900); }
+.card__duration { margin: 0.5rem 0 0; font-size: 0.95rem; }
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--blue-100);
+  color: var(--blue-700);
+}
+.badge--intermediate { background: #cfe1fb; }
+.badge--advanced { background: var(--blue-700); color: var(--white); }
+
+/* ---- Employee cards & module tracker ---- */
+:root { --space-1: 0.5rem; --space-2: 1rem; --space-3: 1.5rem; }
+
+.tracker {
+  background: var(--white);
+  border: 2px solid var(--blue-500);
+  border-radius: 12px;
+  padding: var(--space-2);
+  margin-bottom: var(--space-2);
+  text-align: center;
+}
+.tracker h2 { margin: 0; font-size: 1.1rem; color: var(--blue-900); }
+.tracker__value { margin: var(--space-1) 0; font-size: 2.25rem; font-weight: 700; color: var(--blue-700); }
+.tracker__done {
+  margin: 0 0 var(--space-1);
+  padding: 0.35rem var(--space-2);
+  display: inline-block;
+  background: var(--blue-700);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 999px;
+}
+.tracker__actions { display: flex; flex-wrap: wrap; gap: var(--space-1); justify-content: center; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.employee {
+  background: var(--white);
+  border-top: 5px solid var(--blue-700);
+  border-radius: 8px;
+  padding: var(--space-2);
+}
+.employee__top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-1); margin-bottom: var(--space-1); }
+.employee__top h3 { margin: 0; font-size: 1.05rem; color: var(--blue-900); }
+.role {
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-500);
+}
+.employee__details { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem var(--space-2); margin: 0; font-size: 0.95rem; }
+.employee__details dt { color: var(--blue-700); font-weight: 600; }
+.employee__details dd { margin: 0; }
