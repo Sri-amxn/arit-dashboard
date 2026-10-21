@@ -12,8 +12,8 @@ const courses = [
 
 const employees = [
   { id: 1, name: "Ujjawal ", department: "Engineering", location: "Delhi", skill: "React", yearsExperience: 7 },
-  { id: 2, name: "Joy", department: "Design", location: "Jodhpur", skill: "UI Prototyping", yearsExperience: 2 },
-  { id: 3, name: "Udit", department: "Data", location: "Jodhpur", skill: "SQL & Analytics", yearsExperience: 4 },
+  { id: 2, name: "Joy", department: "Design", location: "Jodhpur", skill: "UI Prototyping", yearsExperience: 10 },
+  { id: 3, name: "Udit", department: "Data", location: "Jodhpur", skill: "SQL & Analytics", yearsExperience: 8 },
 ];
 
 function App() {
